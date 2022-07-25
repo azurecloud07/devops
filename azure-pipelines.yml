@@ -9,5 +9,11 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: echo Hello, world!
+jobs:
+- job: Firstjob
+  timeoutInMinutes: 10
+  - bash: echo "The last ride"
+
+- job: Secondjob
+ steps:
+  - bash:  echo "Song 295"
